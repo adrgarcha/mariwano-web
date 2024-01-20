@@ -12,7 +12,7 @@ import crearmemeExample from "../../assets/commands/crearmeme.png";
 export default function FunCategory() {
     return (
         <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
-            <CategoryTitle title={"Fun"}>
+            <CategoryTitle title={"Diversión"}>
                 Categoría de los comandos buenos
             </CategoryTitle>
             <CategorySection command={"arabfunny"} params={"لا أحد"} firstImageUrl={arabfunnyExample} secondImageUrl={arabfunnyExample2}>
