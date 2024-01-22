@@ -86,5 +86,5 @@ export const Componente = ({element, height, width}) =>{
         </div>
       </div>
     );
-  };
+  }
   
