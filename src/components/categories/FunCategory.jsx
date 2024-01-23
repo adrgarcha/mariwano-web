@@ -93,7 +93,7 @@ export default function FunCategory() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "10vh",
+          height: "15vh",
         }}
       >
         <DiscordMessage msg={"el que madruga se encuentra con todo cerrado😔🤙"} isBot={true}></DiscordMessage>
@@ -117,7 +117,7 @@ export default function FunCategory() {
           height: "30vh",
         }}
       >
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/kahoot.png"} imagenHeight={190} imagenWidth={320}></DiscordMessage>
+        <DiscordMessage msg={""} isBot={true} size={500} imagen={"/src/assets/commands/kahoot.png"} imagenHeight={210} imagenWidth={370}></DiscordMessage>
       </div>
       <CategorySection
         command={"padalustro"}
@@ -146,10 +146,11 @@ export default function FunCategory() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "50vh",
+          height: "70vh",
         }}
       >
         <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/ryangosling.png"} imagenHeight={235} imagenWidth={300}></DiscordMessage>
+        <DiscordMessage msg={""} isBot={true} size={500} imagen={"https://media.vogue.fr/photos/5fbbdfd569406dbb7ff1ca7c/2:3/w_2560%2Cc_limit/010_A7A11280_145.jpg"} imagenHeight={590} imagenWidth={380}></DiscordMessage>
       </div>
     </article>
   );

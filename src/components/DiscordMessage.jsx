@@ -18,11 +18,11 @@ export const Componente = ({element, height, width}) =>{
     </div>);
   }
   
-  export default function DiscordMessage ({ msg, isBot, imagen, imagenHeight, imagenWidth }) {
+  export default function DiscordMessage ({ msg, isBot, size, imagen, imagenHeight, imagenWidth }) {
     const messageStyle = {
       display: "flex",
       flexDirection: "row", // Cambiado a fila para alinear la foto y el contenido
-      maxWidth: `400px`, // ajusta según tus necesidades
+      maxWidth: `${size==null?400:size}px`, // ajusta según tus necesidades
       background: "#36393f", // color de fondo de Discord
       padding: "10px",
       borderRadius: "8px",
