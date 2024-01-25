@@ -128,7 +128,7 @@ export default function MusicCategory() {
         <DiscordMessage msg={""} size={520} isBot={true} imagen={"/src/assets/commands/shuffle.png"} imagenHeight={155} imagenWidth={400}></DiscordMessage>
       </div>
       <CategorySection command={"skip"} params={"Ninguno"} >
-                Mezcla aleatoriamente el orden de las canciones de la cola.
+                Salta al siguiente track de la cola.
             </CategorySection>
             <div
         className="flex container"
