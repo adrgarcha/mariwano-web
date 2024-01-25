@@ -1,10 +1,5 @@
 import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
-import serverInfoExample from "../../assets/commands/server-info-example.png";
-import suggestExample1 from "../../assets/commands/suggest-example-1.png";
-import suggestExample2 from "../../assets/commands/suggest-example-2.png";
-import reportExample1 from "../../assets/commands/report-example-1.png";
-import reportExample2 from "../../assets/commands/report-example-2.png";
 import DiscordMessage from "../DiscordMessage";
 export default function MusicCategory() {
     return (
@@ -27,7 +22,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={""} size={500} isBot={true} imagen={"/src/assets/commands/clear.png"} imagenHeight={145} imagenWidth={385}></DiscordMessage>
       </div> 
-            <CategorySection command={"loop"} params={"mode"} firstImageUrl={serverInfoExample}>
+            <CategorySection command={"loop"} params={"mode"} >
                 Pone la canción/sonido/vídeo actualmente retransmitiéndose o toda la cola en bucle:<nav/>
                 <nav/>
                 · Modo <i>Off</i>: desactiva el bucle de la cola o el track actual.<nav/>
@@ -46,7 +41,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/loop1.png"} imagenHeight={150} imagenWidth={435}></DiscordMessage>
       </div>
-            <CategorySection command={"now-playing"} params={"Ninguno"} firstImageUrl={suggestExample1} secondImageUrl={suggestExample2}>
+            <CategorySection command={"now-playing"} params={"Ninguno"} >
                 Muestra el track que se está retransmitiendo.
             </CategorySection>
             <div
@@ -61,7 +56,7 @@ export default function MusicCategory() {
         <DiscordMessage msg={""} size={520} isBot={true} imagen={"/src/assets/commands/now-playing.png"} imagenHeight={162} imagenWidth={540}></DiscordMessage>
         
       </div>
-            <CategorySection command={"pause"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+            <CategorySection command={"pause"} params={"Ninguno"} >
                 Pausa el track si se está reproduciendo. Si ya está en pausa, lo renauda.
             </CategorySection>
             <div
@@ -76,7 +71,7 @@ export default function MusicCategory() {
         <DiscordMessage msg={""} size={550} isBot={true} imagen={"/src/assets/commands/pause1.png"} imagenHeight={160} imagenWidth={445}></DiscordMessage>
         <DiscordMessage msg={""} size={550} isBot={true} imagen={"/src/assets/commands/pause2.png"} imagenHeight={160} imagenWidth={445}></DiscordMessage>
       </div> 
-            <CategorySection command={"play"} params={"query"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+            <CategorySection command={"play"} params={"query"}>
                 Añade a la cola una canción de YouTube o Spotify, también se puede añadir todas las canciones de una playlist a la cola poniendo el enlace de la playlist (ya sea de Spotify o YouTube). También se admiten de YouTube a parte de canciones poner el audio de cualquier vídeo.
             </CategorySection>
             <div
@@ -90,7 +85,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={"Se puso en cola: RingsOfGeonosis - Nintendo Wii - Shop Channel Music (Extended) HQ"} size={520} isBot={true}></DiscordMessage>
       </div>
-      <CategorySection command={"previous"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+      <CategorySection command={"previous"} params={"Ninguno"}>
                 Reproduce la canción anterior.
             </CategorySection>
             <div
@@ -104,7 +99,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={""} size={540} isBot={true} imagen={"/src/assets/commands/previous.png"} imagenHeight={145} imagenWidth={485}></DiscordMessage>
       </div> 
-            <CategorySection command={"queue"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+            <CategorySection command={"queue"} params={"Ninguno"}>
                 Muestra los 10 primeros tracks de la cola con paginación.
             </CategorySection>
             <div
@@ -118,7 +113,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={""} size={500} isBot={true} imagen={"/src/assets/commands/queue.png"} imagenHeight={250} imagenWidth={350}></DiscordMessage>
       </div> 
-            <CategorySection command={"shuffle"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+            <CategorySection command={"shuffle"} params={"Ninguno"} >
                 Mezcla aleatoriamente el orden de las canciones de la cola.
             </CategorySection>
             <div
@@ -132,7 +127,7 @@ export default function MusicCategory() {
       >
         <DiscordMessage msg={""} size={520} isBot={true} imagen={"/src/assets/commands/shuffle.png"} imagenHeight={155} imagenWidth={400}></DiscordMessage>
       </div>
-      <CategorySection command={"skip"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+      <CategorySection command={"skip"} params={"Ninguno"} >
                 Mezcla aleatoriamente el orden de las canciones de la cola.
             </CategorySection>
             <div
@@ -148,7 +143,7 @@ export default function MusicCategory() {
         <DiscordMessage msg={""} size={520} isBot={true} imagen={"/src/assets/commands/skip2.png"} imagenHeight={140} imagenWidth={450}></DiscordMessage>
       </div> 
 
-            <CategorySection command={"stop"} params={"Ninguno"} firstImageUrl={reportExample1} secondImageUrl={reportExample2}>
+            <CategorySection command={"stop"} params={"Ninguno"} >
                 Comando que hace irse al bot del canal.
             </CategorySection>
             <div
