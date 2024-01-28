@@ -1,7 +1,7 @@
 import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordMessage from "../DiscordMessage";
-
+import DiscordSection from "../DiscordSection";
 export default function FunCategory() {
   return (
     <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
@@ -16,15 +16,7 @@ export default function FunCategory() {
         هذا الأمر يتضمن اقتراح إرسال رسائل باللغة العربية. يمكن تغيير نصوص
         الأوامر حسب الرغبة دون أن تتجاوز مليوني حر
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "70vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage
           msg={
             "الافتتاحية (الفاتحة) 1. بسم الله الرحمن الرحيم. 2. الحمد لله رب العالمين. 3. الرحمن الرحيم. 4. سيد يوم الدين. 5. إياك نعبد وإياك نستعين. 6. اهدنا إلى الصراط المستقيم. 7. صراط الذين أنعمت عليهم غير المغضوب عليهم ولا الضالين. 2. البقرة (البقرة) بسم الله الرحمن الرحيم 1. ألف، لام، ميم. 2. ذلك الكتاب لا ريب فيه هدى للمتقين. 3. الذين يؤمنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون. 4. والذين يؤمنون بما أنزل إليك وما أنزل من قبلك وبالآخرة هم يوقنون. 5. أولئك على هدى من ربهم. هؤلاء هم الناجحون. 6. أما الذين كفروا سواء عليهم أأنذرتهم أم لم تنذرهم لا يؤمنون. 7. ختم الله على قلوبهم وعلى سمعهم وعلى أبصارهم غشاوة. ولهم عذاب شديد . 8. ومن الناس من يقول آمنا بالله واليوم الآخر وما هم بمؤمنين. 9. يخادعون الله والذين آمنوا وما يخدعون إلا أنفسهم وما يشعرون. 10. في قلوبهم مرض فزادهم الله مرضا. ولهم عذاب أليم بما كذبوا. 11. وإذا قيل لهم لا تفسدوا في الأرض قالوا إنما نحن مصلحون. 12. بل هم المفسدون ولكن لا يشعرون. 13. وإذا قيل لهم آمنوا كما آمن الناس قالوا أنؤمن كما آمن السفهاء؟ في"
@@ -37,7 +29,7 @@ export default function FunCategory() {
           }
           isBot={true}
         ></DiscordMessage>
-      </div>
+      </DiscordSection>
       <CategorySection
         command={"crearmeme"}
         params={"url, textoArriba, textoAbajo, efectos"}
@@ -47,17 +39,9 @@ export default function FunCategory() {
         efecto (esferizar, desenfocar, etc.). Envía el resultado de la imagen
         (por ahora no puede enviar gifs).
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "20vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/crearmeme2.png"} imagenHeight={60} imagenWidth={300}></DiscordMessage>
-      </div>
+      </DiscordSection>
       <CategorySection
         command={"fakeyou"}
         params={"voz, texto"}
@@ -67,38 +51,20 @@ export default function FunCategory() {
         recite el texto en el parametro <i>voz</i> (el código coge el primero
         que encuentre) y el texto en el otro parámetro.
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "20vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={"Cargando audio..."} isBot={true}></DiscordMessage>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/tts_audio.png"} imagenHeight={130} imagenWidth={300}>
-          
-        </DiscordMessage>
-      </div>
+        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/tts_audio.png"} imagenHeight={130} imagenWidth={300}></DiscordMessage>
+      </DiscordSection>
       <CategorySection
         command={"frasejoker"}
         params={"add, all"}
       >
         Envía una frase aleatoria digna de cita del Joker.
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "15vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={"el que madruga se encuentra con todo cerrado😔🤙"} isBot={true}></DiscordMessage>
         <DiscordMessage msg={"para mi el locomotor es sólo motor🥵"} isBot={true}></DiscordMessage>
-      </div>
+      </DiscordSection>
       <CategorySection
         command={"kahoot"}
         params={"hardcore"}
@@ -108,50 +74,25 @@ export default function FunCategory() {
         dificultad de la pregunta. En el modo <i>hardcore</i> sólo aparecen
         preguntas difíciles. Hay un límite de 5 preguntas diarias.
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "30vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={""} isBot={true} size={500} imagen={"/src/assets/commands/kahoot.png"} imagenHeight={210} imagenWidth={370}></DiscordMessage>
-      </div>
+      </DiscordSection>
       <CategorySection
         command={"padalustro"}
         params={"Ninguno"}
       ></CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "30vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={"Tenga cuidado con el consumo de cannabis, un sólo porro contiene:\nCrotolamo\n· Aboreo\n· Acudo\n· Nifo\n· Uxiono\n· Trujo\n· Permatrago\n· Padalustro\n· Orbo\n· Tiro\n· Primo\n· Obo\n· Oplo\n· Crotofroto\n· Tampo\n· Timulo\n· Cupo\n· Combro"} isBot={true} ></DiscordMessage>
-      </div>
+      </DiscordSection>
       <CategorySection
         command={"ryangosling"}
-        params={"Ninguno"}
-      >
+        params={"Ninguno"}>
         Envía una foto aleatoria de Ryan Gosling.
       </CategorySection>
-      <div
-        className="flex container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "70vh",
-        }}
-      >
+      <DiscordSection>
         <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/ryangosling.png"} imagenHeight={235} imagenWidth={300}></DiscordMessage>
         <DiscordMessage msg={""} isBot={true} size={500} imagen={"https://media.vogue.fr/photos/5fbbdfd569406dbb7ff1ca7c/2:3/w_2560%2Cc_limit/010_A7A11280_145.jpg"} imagenHeight={590} imagenWidth={380}></DiscordMessage>
-      </div>
+      </DiscordSection>
     </article>
   );
 }

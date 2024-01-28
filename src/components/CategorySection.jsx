@@ -4,9 +4,6 @@ export default function CategorySection({ command, params, children }) {
             <h2 className="text-4xl font-bold">/{command}</h2>
             <h3 className="text-xl font-bold">Parámetros: {params}</h3>
             <p className="text-xl">{children}</p>
-            <section className="flex justify-center gap-x-6">
-                
-            </section>
         </section>
     )
 }
