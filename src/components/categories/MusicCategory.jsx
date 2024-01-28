@@ -12,7 +12,7 @@ import queue from "/src/assets/commands/queue.png";
 import shuffle from "/src/assets/commands/shuffle.png";
 import skip1 from "/src/assets/commands/skip1.png";
 import skip2 from "/src/assets/commands/skip2.png";
-import stop from "/src/assets/commands/stop.png";
+import stop1 from "/src/assets/commands/stop1.png";
 
 export default function MusicCategory() {
   return (
@@ -97,7 +97,7 @@ export default function MusicCategory() {
         Comando que para toda la música actual y provoca que el bot salga del canal.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={stop} size={500} imagenHeight={170} imagenWidth={350} />
+        <DiscordMessage msg={""} isBot={true} imagen={stop1} size={500} imagenHeight={170} imagenWidth={350} />
       </DiscordSection>
     </article>
   )
