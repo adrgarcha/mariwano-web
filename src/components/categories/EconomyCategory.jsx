@@ -15,74 +15,45 @@ export default function EconomyCategory() {
         parámetro opcional.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={"Tienes 1000 gramos de cocaína."}
-          isBot={true}
-        ></DiscordMessage>
+        <DiscordMessage msg={"Tienes 1000 gramos de cocaína."} isBot={true} />
       </DiscordSection>
+
       <CategorySection command={"daily"} params={"Ninguno"}>
         Recolectas los gramos diarios. Por defecto son 1000.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={
-            "1000 gramos de cocaína fueron agregadas a tu inventario. Ahora tienes 2000"
-          }
-          isBot={true}
-        ></DiscordMessage>
+        <DiscordMessage msg={"1000 gramos de cocaína fueron agregadas a tu inventario. Ahora tienes 2000"} isBot={true} />
       </DiscordSection>
+
       <CategorySection command={"donate"} params={"usuario, cantidad"}>
         Envía una cantidad de dinero específica al usuario que quieras. Como
         mínimo tiene que ser 1.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={"Tienes que donar como mínimo 1 gramo de cocaína. No seas rata."}
-          isBot={true}
-        ></DiscordMessage>
-        <DiscordMessage
-          msg={""}
-          isBot={true}
-          imagen={"/src/assets/commands/donate.png"}
-          imagenHeight={48}
-          imagenWidth={300}
-        ></DiscordMessage>
+        <DiscordMessage msg={"Tienes que donar como mínimo 1 gramo de cocaína. No seas rata."} isBot={true} />
+        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/donate.png"} imagenHeight={48} imagenWidth={300} />
       </DiscordSection>
+
       <CategorySection command={"gamble"} params={"cantidad"}>
         Apuesta una cantidad de gramos, como mínimo 100.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={
-            "No has ganado nada, pero recuerda que el 90% de la gente siempre lo deja antes de recuperarlo todo 🤑. Ahora mismo tienes 0 gramos."
-          }
-          isBot={true}
-        ></DiscordMessage>
+        <DiscordMessage msg={"No has ganado nada, pero recuerda que el 90% de la gente siempre lo deja antes de recuperarlo todo 🤑. Ahora mismo tienes 0 gramos."} isBot={true} />
       </DiscordSection>
+
       <CategorySection command={"leaderboard"} params={"Ninguno"}>
         Muestra el top 10 de personas más ricas del servidor.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={""}
-          isBot={true}
-          imagen={"/src/assets/commands/leaderboard.png"}
-          imagenHeight={189}
-          imagenWidth={330}
-        ></DiscordMessage>
+        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/leaderboard.png"} imagenHeight={189} imagenWidth={330} />
       </DiscordSection>
+
       <CategorySection command={"level"} params={"usuario"}>
         Muestra el nivel de experiencia de la persona mencionada si es que se ha
         mencionado, sino muestra la del propio usuario.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={""}
-          isBot={true}
-          imagen={"/src/assets/commands/level.png"}
-          imagenHeight={100}
-          imagenWidth={330}
-        ></DiscordMessage>
+        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/level.png"} imagenHeight={100} imagenWidth={330} />
       </DiscordSection>
 
       <CategorySection command={"shop"} params={"Ninguno"}>
@@ -91,12 +62,7 @@ export default function EconomyCategory() {
         gramos.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage
-          msg={
-            "Se ha completado correctamente la edición del rol a El Guisador por 3000 gramos 🤑💸."
-          }
-          isBot={true}
-        ></DiscordMessage>
+        <DiscordMessage msg={"Se ha completado correctamente la edición del rol a El Guisador por 3000 gramos 🤑💸."} isBot={true} />
       </DiscordSection>
     </article>
   );
