@@ -2,6 +2,7 @@ import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordMessage from "../DiscordMessage";
 import DiscordSection from "../DiscordSection";
+
 export default function AdminCategory() {
     return (
         <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
