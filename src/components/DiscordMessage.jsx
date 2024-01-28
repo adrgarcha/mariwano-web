@@ -19,52 +19,10 @@ export const Componente = ({element, height, width}) =>{
   }
   
   export default function DiscordMessage ({ msg, isBot, size, imagen, imagenHeight, imagenWidth }) {
-    const messageStyle = {
-      display: "flex",
-      flexDirection: "row", // Cambiado a fila para alinear la foto y el contenido
-      maxWidth: `${size==null?400:size}px`, // ajusta según tus necesidades
-      background: "#36393f", // color de fondo de Discord
-      padding: "10px",
-      borderRadius: "8px",
-      margin: "10px",
-      fontFamily: "gg sans Medium, sans-serif", // fuente utilizada por Discord
-    };
-  
-    const avatarStyle = {
-      width: "40px",
-      height: "40px",
-      borderRadius: "50%", // Hace que la imagen sea circular
-      marginRight: "10px", // Espacio entre la imagen y el contenido
-      overflow: "hidden", // Asegura que la imagen no sobresalga del círculo
-      flexShrink: 0,
-    };
-  
-    const authorContainerStyle = {
-      display: "flex",
-      alignItems: "center", // Alinea la etiqueta y el nombre verticalmente
-    };
-  
-    const authorStyle = {
-      color: "#7289da", // color del nombre de usuario en Discord
-      marginBottom: "-2px",
-    };
-  
-    const botTagStyle = {
-      background: "#7389da", // color morado de la etiqueta "BOT" en Discord
-      color: "#ffffff", // color del texto de la etiqueta
-      padding: "0px 5px",
-      borderRadius: "4px",
-      marginLeft: "5px", // Espacio entre la etiqueta y el nombre
-      fontSize: "12px",
-    };
-  
-    const contentStyle = {
-      color: "#ffffff", // color del texto en Discord
-    };
-  
     return (
-      <div style={messageStyle}>
-        <div style={avatarStyle}>
+      // especificos: color background, tipo de letra y maxWidth (es variable)
+      <div style={{maxWidth: `${size==null?400:size}px`, background: "#36393f", fontFamily: "gg sans Medium, sans-serif"}} className="flex flex-row max-w-fit p-2.5 rounded-lg m-2.5">
+        <div style={{borderRadius: "50%"}} className="w-10 h-10 mr-2.5 overflow-hidden shrink-0">
           <link
             href="https://fonts.cdnfonts.com/css/gg-sans-2"
             rel="stylesheet"
@@ -76,11 +34,11 @@ export const Componente = ({element, height, width}) =>{
           />
         </div>
         <div>
-          <div style={authorContainerStyle}>
-            <div style={authorStyle}>Mariwano</div>
-            {isBot && <div style={botTagStyle}>BOT</div>}
+          <div className="flex items-center">
+            <div style={{color: "#7289da", marginBottom: "-2px"}}>Mariwano</div>
+            {isBot && <div style={{background: "#7389da", padding: "0px 5px", fontSize: "12px"}} className="white rounded ml-1">BOT</div>}
           </div>
-          <div style={contentStyle}>{msg}
+          <div className="white">{msg}
           {imagen && <Componente element={imagen} height={imagenHeight} width={imagenWidth}/>}
           </div>
         </div>
