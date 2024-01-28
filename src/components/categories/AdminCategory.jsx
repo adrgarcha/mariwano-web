@@ -39,6 +39,13 @@ export default function AdminCategory() {
             <CategorySection command={"autorole-disable"} params={"Ninguno"}>
                 Desactiva la aplicación del auto-rol hacia los usuarios para todo el servidor.
             </CategorySection>
+            <CategorySection command={"notification-remove"} params={"youtube-channel-id, notification-channel"}>
+                Quitar las notificaciones por parte del bot del canal de YouTube cuyo ID es <i>youtube-channel-id</i> en el canal (del servidor de Discord) <i>notification-channel</i>.
+            </CategorySection>
+            <CategorySection command={"notification-setup"} params={"youtube-channel-id, notification-channel, custom-message"}>
+                Añadir notificaciones de los nuevos vídeos que se suben al canal de YouTube con ID <i>youtube-channel-id</i> en el canal (del servidor de Discord) <i>notification-channel</i>.
+            </CategorySection>
+
         </article>
     )
 }
