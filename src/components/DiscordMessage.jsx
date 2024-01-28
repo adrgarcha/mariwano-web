@@ -1,8 +1,9 @@
+import mariwanoIcon from "/src/assets/mariwano-icon.png";
 
-export const ImageSection = ({ element, height, width }) => {
+export const ImageSection = ({ image, height, width }) => {
   return (
     <section className={`w-[${width}px] h-[${height}px] mr-[10px] overflow-hidden flex-shrink-0`}>
-      <img src={element} alt="Imagen de un mensaje de Discord" />
+      <img src={image} alt="Imagen de un mensaje de Discord" />
     </section>
   );
 }
@@ -11,7 +12,7 @@ export default function DiscordMessage({ msg, isBot, size, imagen, imagenHeight,
   return (
     <div style={{ maxWidth: `${size == null ? 400 : size}px` }} className="flex bg-[#36393f] font-['gg_sans_Medium'] max-w-fit p-2.5 rounded-lg m-2.5">
       <section className="w-10 h-10 mr-2.5 overflow-hidden shrink-0 rounded-full">
-        <img src="/src/assets/mariwano-icon.png" alt="Avatar" className="w-full h-full object-cover" />
+        <img src={mariwanoIcon} alt="Avatar" className="w-full h-full object-cover" />
       </section>
       <article>
         <section className="flex items-center">
@@ -20,7 +21,7 @@ export default function DiscordMessage({ msg, isBot, size, imagen, imagenHeight,
         </section>
         <section>
           <p>{msg}</p>
-          {imagen && <ImageSection element={imagen} height={imagenHeight} width={imagenWidth} />}
+          {imagen && <ImageSection image={imagen} height={imagenHeight} width={imagenWidth} />}
         </section>
       </article>
     </div>
