@@ -2,6 +2,14 @@ import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordSection from "../DiscordSection";
 import DiscordMessage from "../DiscordMessage";
+import helpCommand1 from "/src/assets/commands/help-command-example-1.png";
+import helpCommand2 from "/src/assets/commands/help-command-example-2.png";
+import serverInfo from "/src/assets/commands/server-info-example.png";
+import suggest1 from "/src/assets/commands/suggest-example-1.png";
+import suggest2 from "/src/assets/commands/suggest-example-2.png";
+import report1 from "/src/assets/commands/report-example-1.png";
+import report2 from "/src/assets/commands/report-example-2.png";
+
 export default function GeneralCategory() {
     return (
         <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
@@ -13,15 +21,15 @@ export default function GeneralCategory() {
                 Muestra una lista con todos los comandos del bot.
             </CategorySection>
             <DiscordSection>
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/help-command-example-1.png"} size={500} imagenHeight={290} imagenWidth={350} />
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/help-command-example-2.png"} size={500} imagenHeight={295} imagenWidth={390} />
+                <DiscordMessage msg={""} isBot={true} imagen={helpCommand1} size={500} imagenHeight={290} imagenWidth={350} />
+                <DiscordMessage msg={""} isBot={true} imagen={helpCommand2} size={500} imagenHeight={295} imagenWidth={390} />
             </DiscordSection>
 
             <CategorySection command={"server-info"} params={"Ninguno"} >
                 Muestra información relevante acerca del servidor de Discord en el que te encuentres.
             </CategorySection>
             <DiscordSection>
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/server-info-example.png"} size={800} imagenHeight={310} imagenWidth={435} />
+                <DiscordMessage msg={""} isBot={true} imagen={serverInfo} size={800} imagenHeight={310} imagenWidth={435} />
             </DiscordSection>
 
             <CategorySection command={"suggest"} params={"Ninguno"} >
@@ -30,8 +38,8 @@ export default function GeneralCategory() {
                 cuales podras votar a favor o en contra de la sugerencia. Y un administrador del servidor podra aprobar o rechazar dicha sugerencia.
             </CategorySection>
             <DiscordSection>
-                <DiscordMessage msg={"Sugerencia creada."} isBot={true} imagen={"/src/assets/commands/suggest-example-1.png"} size={800} imagenHeight={255} imagenWidth={540} />
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/suggest-example-2.png"} imagenHeight={85} imagenWidth={250} />
+                <DiscordMessage msg={"Sugerencia creada."} isBot={true} imagen={suggest1} size={800} imagenHeight={255} imagenWidth={540} />
+                <DiscordMessage msg={""} isBot={true} imagen={suggest2} imagenHeight={85} imagenWidth={250} />
             </DiscordSection>
             
             <CategorySection command={"report"} params={"Ninguno"} >
@@ -40,8 +48,8 @@ export default function GeneralCategory() {
                 el administrador podra marcarlo como solucionado o como falso si no se trataba de un informe válido.
             </CategorySection>
             <DiscordSection>
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/report-example-1.png"} size={700} imagenHeight={265} imagenWidth={540} />
-                <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/report-example-2.png"} size={700} imagenHeight={285} imagenWidth={550} />
+                <DiscordMessage msg={""} isBot={true} imagen={report1} size={700} imagenHeight={265} imagenWidth={540} />
+                <DiscordMessage msg={""} isBot={true} imagen={report2} size={700} imagenHeight={285} imagenWidth={550} />
             </DiscordSection>
         </article>
     )

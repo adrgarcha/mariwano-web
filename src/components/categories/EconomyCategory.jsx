@@ -2,6 +2,10 @@ import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordMessage from "../DiscordMessage";
 import DiscordSection from "../DiscordSection";
+import donate from "/src/assets/commands/donate.png";
+import leaderboard from "/src/assets/commands/leaderboard.png";
+import level from "/src/assets/commands/level.png";
+
 export default function EconomyCategory() {
   return (
     <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
@@ -31,7 +35,7 @@ export default function EconomyCategory() {
       </CategorySection>
       <DiscordSection>
         <DiscordMessage msg={"Tienes que donar como mínimo 1 gramo de cocaína. No seas rata."} isBot={true} />
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/donate.png"} imagenHeight={48} imagenWidth={300} />
+        <DiscordMessage msg={""} isBot={true} imagen={donate} imagenHeight={48} imagenWidth={300} />
       </DiscordSection>
 
       <CategorySection command={"gamble"} params={"cantidad"}>
@@ -45,7 +49,7 @@ export default function EconomyCategory() {
         Muestra el top 10 de personas más ricas del servidor.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/leaderboard.png"} imagenHeight={189} imagenWidth={330} />
+        <DiscordMessage msg={""} isBot={true} imagen={leaderboard} imagenHeight={189} imagenWidth={330} />
       </DiscordSection>
 
       <CategorySection command={"level"} params={"usuario"}>
@@ -53,7 +57,7 @@ export default function EconomyCategory() {
         mencionado, sino muestra la del propio usuario.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/level.png"} imagenHeight={100} imagenWidth={330} />
+        <DiscordMessage msg={""} isBot={true} imagen={level} imagenHeight={100} imagenWidth={330} />
       </DiscordSection>
 
       <CategorySection command={"shop"} params={"Ninguno"}>

@@ -2,6 +2,12 @@ import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordMessage from "../DiscordMessage";
 import DiscordSection from "../DiscordSection";
+import crearMeme from "/src/assets/commands/crearmeme.png";
+import ttsAudio from "/src/assets/commands/tts-audio.png";
+import kahoot from "/src/assets/commands/kahoot.png";
+import ryanGosling1 from "/src/assets/commands/ryangosling-1.png";
+import ryanGosling2 from "/src/assets/commands/ryangosling-2.jpg";
+
 export default function FunCategory() {
   return (
     <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
@@ -35,7 +41,7 @@ export default function FunCategory() {
         (por ahora no puede enviar gifs).
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/crearmeme2.png"} imagenHeight={60} imagenWidth={300} />
+        <DiscordMessage msg={""} isBot={true} imagen={crearMeme} imagenHeight={60} imagenWidth={300} />
       </DiscordSection>
 
       <CategorySection command={"fakeyou"} params={"voz, texto"}>
@@ -46,7 +52,7 @@ export default function FunCategory() {
       </CategorySection>
       <DiscordSection>
         <DiscordMessage msg={"Cargando audio..."} isBot={true} />
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/tts_audio.png"} imagenHeight={130} imagenWidth={300} />
+        <DiscordMessage msg={""} isBot={true} imagen={ttsAudio} imagenHeight={130} imagenWidth={300} />
       </DiscordSection>
 
       <CategorySection command={"frasejoker"} params={"add, all"}>
@@ -64,7 +70,7 @@ export default function FunCategory() {
         preguntas difíciles. Hay un límite de 5 preguntas diarias.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/kahoot.png"} size={500} imagenHeight={210} imagenWidth={370} />
+        <DiscordMessage msg={""} isBot={true} imagen={kahoot} size={500} imagenHeight={210} imagenWidth={370} />
       </DiscordSection>
 
       <CategorySection command={"padalustro"} params={"Ninguno"} />
@@ -81,8 +87,8 @@ export default function FunCategory() {
         Envía una foto aleatoria de Ryan Gosling.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/ryangosling.png"} imagenHeight={235} imagenWidth={300} />
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/ryangosling-2.jpg"} size={400} imagenHeight={590} imagenWidth={380} />
+        <DiscordMessage msg={""} isBot={true} imagen={ryanGosling1} imagenHeight={235} imagenWidth={300} />
+        <DiscordMessage msg={""} isBot={true} imagen={ryanGosling2} size={400} imagenHeight={590} imagenWidth={380} />
       </DiscordSection>
     </article>
   );

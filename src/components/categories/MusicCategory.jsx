@@ -2,6 +2,18 @@ import CategorySection from "../CategorySection";
 import CategoryTitle from "../CategoryTtitle";
 import DiscordMessage from "../DiscordMessage";
 import DiscordSection from "../DiscordSection";
+import clear from "/src/assets/commands/clear.png";
+import loop from "/src/assets/commands/loop.png";
+import nowPlaying from "/src/assets/commands/now-playing.png";
+import pause1 from "/src/assets/commands/pause1.png";
+import pause2 from "/src/assets/commands/pause2.png";
+import previous from "/src/assets/commands/previous.png";
+import queue from "/src/assets/commands/queue.png";
+import shuffle from "/src/assets/commands/shuffle.png";
+import skip1 from "/src/assets/commands/skip1.png";
+import skip2 from "/src/assets/commands/skip2.png";
+import stop1 from "/src/assets/commands/stop1.png";
+
 export default function MusicCategory() {
   return (
     <article className="flex flex-col gap-y-8 px-32 pt-10 pb-32">
@@ -13,7 +25,7 @@ export default function MusicCategory() {
         Elimina de la cola todas las canciones presentes en ella.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/clear.png"} size={500} imagenHeight={145} imagenWidth={385} />
+        <DiscordMessage msg={""} isBot={true} imagen={clear} size={500} imagenHeight={145} imagenWidth={385} />
       </DiscordSection>
 
       <CategorySection command={"loop"} params={"mode"}>
@@ -25,22 +37,22 @@ export default function MusicCategory() {
         · Modo <i>Autoplay</i>: cuando termine la última canción de la cola, automáticamente se añadirá una nueva canción parecida (con el mismo query) al último track.<nav />
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/loop1.png"} imagenHeight={150} imagenWidth={435} />
+        <DiscordMessage msg={""} isBot={true} imagen={loop} imagenHeight={150} imagenWidth={435} />
       </DiscordSection>
 
       <CategorySection command={"now-playing"} params={"Ninguno"} >
         Muestra la canción que se está retransmitiendo.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/now-playing.png"} size={520} imagenHeight={162} imagenWidth={540} />
+        <DiscordMessage msg={""} isBot={true} imagen={nowPlaying} size={520} imagenHeight={162} imagenWidth={540} />
       </DiscordSection>
 
       <CategorySection command={"pause"} params={"Ninguno"} >
         Pausa la canción si se está reproduciendo. Si ya está en pausa, la renauda.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/pause1.png"} size={550} imagenHeight={160} imagenWidth={445} />
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/pause2.png"} size={550} imagenHeight={160} imagenWidth={445} />
+        <DiscordMessage msg={""} isBot={true} imagen={pause1} size={550} imagenHeight={160} imagenWidth={445} />
+        <DiscordMessage msg={""} isBot={true} imagen={pause2} size={550} imagenHeight={160} imagenWidth={445} />
       </DiscordSection>
 
       <CategorySection command={"play"} params={"query"}>
@@ -56,36 +68,36 @@ export default function MusicCategory() {
         Reproduce la canción anterior.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/previous.png"} size={540} imagenHeight={145} imagenWidth={485} />
+        <DiscordMessage msg={""} isBot={true} imagen={previous} size={540} imagenHeight={145} imagenWidth={485} />
       </DiscordSection>
 
       <CategorySection command={"queue"} params={"Ninguno"}>
         Muestra las 10 primeras canciones de la cola con paginación.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/queue.png"} size={500} imagenHeight={250} imagenWidth={350} />
+        <DiscordMessage msg={""} isBot={true} imagen={queue} size={500} imagenHeight={250} imagenWidth={350} />
       </DiscordSection>
 
       <CategorySection command={"shuffle"} params={"Ninguno"} >
         Mezcla aleatoriamente el orden de las canciones de la cola.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/shuffle.png"} size={520} imagenHeight={155} imagenWidth={400} />
+        <DiscordMessage msg={""} isBot={true} imagen={shuffle} size={520} imagenHeight={155} imagenWidth={400} />
       </DiscordSection>
 
       <CategorySection command={"skip"} params={"Ninguno"} >
         Salta a la siguiente canción de la cola.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/skip1.png"} size={520} imagenHeight={140} imagenWidth={450} />
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/skip2.png"} size={520} imagenHeight={140} imagenWidth={450} />
+        <DiscordMessage msg={""} isBot={true} imagen={skip1} size={520} imagenHeight={140} imagenWidth={450} />
+        <DiscordMessage msg={""} isBot={true} imagen={skip2} size={520} imagenHeight={140} imagenWidth={450} />
       </DiscordSection>
 
       <CategorySection command={"stop"} params={"Ninguno"} >
         Comando que para toda la música actual y provoca que el bot salga del canal.
       </CategorySection>
       <DiscordSection>
-        <DiscordMessage msg={""} isBot={true} imagen={"/src/assets/commands/stop1.png"} size={500} imagenHeight={170} imagenWidth={350} />
+        <DiscordMessage msg={""} isBot={true} imagen={stop1} size={500} imagenHeight={170} imagenWidth={350} />
       </DiscordSection>
     </article>
   )
