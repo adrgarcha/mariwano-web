@@ -4,8 +4,6 @@ precision lowp float;
 
 uniform vec3 iResolution;
 varying vec2 vUv;
-iResolution.x = vUv.x
-iResolution.y = vUv.y
 uniform float uTime;   
 // Movimiento
 
@@ -48,20 +46,8 @@ const int iColorB2 = 6;
 //Posicion
 const float fPosicion = 0.5; // 0.5 es el centro de la pantalla
 
-#define m *= mat2( cos( vec4(estiramientoX,estiramientoY,estiramientoZ,estiramientoW) + t*
+void main() {
 
-#define M \
-    (s.xz m.4)), s.xy m.3)), \
-    length(s + sin(t*fGrosor))*log(length(s)+fTamanyo)+ \
-    sin(sin(sin(s=s+s+t).y+s).z+s).x*fIntensidadTensor-fConcavidadTensor)
-
-void mainImage(out vec4 o, vec2 u){
-    vec3 p,s,O,R=iResolution;
-    for(float t=uTime,d=fElevacionZEfectoDeformacion,r;
-            R.z++<fSuavidadEfectoDegradado;
-            o.xyz=O=max(O+fBrilloEfectoDegradado-r*fLongitudDegradado,O+fFondo)*(vec3(fColorR1,fColorG1,fColorB1)-vec3(iColorR2,iColorG2,iColorB2)*(M-r)/4.))
-        s=p=vec3((u-fPosicion*R.xy)/R.y*d,fCorteSeccion-d),
-        d+=min(r=M,fSuavidadLineasEfectoDegradado),
-        s=p+fSaturacion;
-} 
-
+    
+    gl_FragColor = vec4(0.0,1.0,1.0, 1.0);
+}
