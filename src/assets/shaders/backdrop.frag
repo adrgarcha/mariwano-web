@@ -1,3 +1,4 @@
+/*
 #ifdef GL_ES
 precision lowp float;
 #endif
@@ -5,6 +6,7 @@ precision lowp float;
 uniform vec3 iResolution;
 varying vec2 vUv;
 uniform float uTime;   
+
 // Movimiento
 
 const float estiramientoX = 0.0;
@@ -27,11 +29,11 @@ const float fConcavidadTensor = 1.0;
 
 // Detalles
 
-const float fElevacionZEfectoDeformacion = 1.5;
+const float fElevacionZEfectoDeformacion = 2.4;
 const float fSuavidadEfectoDegradado = 10.0;
 const float fBrilloEfectoDegradado = 0.8;
 const float fFondo = 0.2;
-const float fSuavidadLineasEfectoDegradado = 0.3;
+const float fSuavidadLineasEfectoDegradado = 0.2;
 
 // Colores
 // Color 1
@@ -46,8 +48,40 @@ const int iColorB2 = 6;
 //Posicion
 const float fPosicion = 0.5; // 0.5 es el centro de la pantalla
 
-void main() {
+#define m *= mat2( cos( vec4(estiramientoX,estiramientoY,estiramientoZ,estiramientoW) + t*
 
+#define M \
+    (s.xz m.4)), s.xy m.3)), \
+    length(s + sin(t*fGrosor))*log(length(s)+fTamanyo)+ \
+    sin(sin(sin(s=s+s+t).y+s).z+s).x*fIntensidadTensor-fConcavidadTensor)
+
+void main() {
+    vec4 o;
+    vec2 u = vUv * iResolution.xy;
+    vec3 p,s,O,R=iResolution;
     
-    gl_FragColor = vec4(0.0,1.0,1.0, 1.0);
+    for(float t=uTime,d=fElevacionZEfectoDeformacion,r;
+            R.z++<fSuavidadEfectoDegradado;
+            o.xyz=O=max(O+fBrilloEfectoDegradado-r*fLongitudDegradado,O+fFondo)*(vec3(fColorR1,fColorG1,fColorB1)-vec3(iColorR2,iColorG2,iColorB2)*(M-r)/4.))
+        s=p=vec3((u-fPosicion*R.xy)/R.y*d,fCorteSeccion-d),
+        d+=min(r=M,fSuavidadLineasEfectoDegradado),
+        s=p+fSaturacion;
+    
+    gl_FragColor = o;
+}
+*/
+
+uniform float uTime;
+uniform vec3 iResolution;
+varying vec2 vUv;
+
+void main() {
+    // Normalizar las coordenadas UV
+    vec2 fragCoord = vUv * iResolution.xy;
+    vec2 uv = fragCoord/iResolution.xy;
+    
+    // Crear un color base para pruebas
+    vec3 color = vec3(uv.x, uv.y, abs(sin(uTime)));
+    
+    gl_FragColor = vec4(color, 1.0);
 }

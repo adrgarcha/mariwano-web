@@ -1,16 +1,14 @@
 import { OrthographicCamera, Plane, shaderMaterial } from '@react-three/drei';
 import { Canvas, extend, useFrame, useThree } from '@react-three/fiber';
 import React, { useRef } from 'react';
-
 import mariwanoIcon from "../assets/mariwano-icon.png";
 import AdEtiquette from "../components/AdEttiquete";
 import IconButton from "../components/IconButton";
 import GitHubIcon from "../components/icons/GitHubIcon";
 import LinkButton from "../components/LinkButton";
 import Navbar from "../components/Navbar";
+
 // glsl
-
-
 const fragmentShader = await fetch('/src/assets/shaders/backdrop.frag').then(r => r.text());
 const vertexShader = await fetch('/src/assets/shaders/backdrop.vert').then(r => r.text());
 
@@ -33,7 +31,10 @@ export function BackdropPlane() {
   });
 
   return (
-    <Plane args={[2, 2]} position={[0, 0, 0]}>
+    <Plane
+      args={[viewport.width, viewport.height]}
+      position={[0, 0, 0]}
+    >
       <backdropPlaneShader
         key={BackdropPlaneShader.key}
         ref={shader}
@@ -46,8 +47,8 @@ export function BackgroundCanvas() {
   return (
     <Canvas
       gl={{
-        alpha: false,  // Cambiar a true para permitir transparencia
-        antialias: true,  // Cambiar a true para mejorar la calidad visual
+        alpha: false,  // Permitir transparencia
+        antialias: true,  // Mejorar la calidad visual
         preserveDrawingBuffer: true
       }}
       className="!fixed inset-0 -z-10"
@@ -58,16 +59,13 @@ export function BackgroundCanvas() {
   );
 }
 
-
 export default function App() {
   return (
     <>
-
       <div className="relative h-screen w-full overflow-hidden font-mono font-medium text-white">
         <Navbar />
         <BackgroundCanvas />
-
-        <main className="flex flex-col justify-center items-center gap-y-10 h-full relativez-10">
+        <main className="flex flex-col justify-center items-center gap-y-10 h-full relative z-10">
           <h1 className="text-8xl font-bold">Mariwano</h1>
           <img className="w-[256px] h-[256px] rounded-full" src={mariwanoIcon} alt="Mariwano Icon" />
           <div className="flex gap-x-2">
@@ -76,7 +74,9 @@ export default function App() {
           </div>
           <AdEtiquette />
         </main>
+
       </div>
+
     </>
   );
 }
