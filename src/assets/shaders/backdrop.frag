@@ -1,4 +1,3 @@
-/*
 #ifdef GL_ES
 precision lowp float;
 #endif
@@ -57,31 +56,17 @@ const float fPosicion = 0.5; // 0.5 es el centro de la pantalla
 
 void main() {
     vec4 o;
+    vec2 uv = vUv;
     vec2 u = vUv * iResolution.xy;
     vec3 p,s,O,R=iResolution;
     
     for(float t=uTime,d=fElevacionZEfectoDeformacion,r;
             R.z++<fSuavidadEfectoDegradado;
-            o.xyz=O=max(O+fBrilloEfectoDegradado-r*fLongitudDegradado,O+fFondo)*(vec3(fColorR1,fColorG1,fColorB1)-vec3(iColorR2,iColorG2,iColorB2)*(M-r)/4.))
+            o.xyz=clamp(O=max(O+fBrilloEfectoDegradado-r*fLongitudDegradado,O+fFondo)*(vec3(fColorR1,fColorG1,fColorB1)-vec3(iColorR2,iColorG2,iColorB2)*(M-r)/4.), 0.0, 1.0))
         s=p=vec3((u-fPosicion*R.xy)/R.y*d,fCorteSeccion-d),
         d+=min(r=M,fSuavidadLineasEfectoDegradado),
         s=p+fSaturacion;
     
+    o.w = 1.0; // Aseguramos que el canal alfa esté definido
     gl_FragColor = o;
-}
-*/
-
-uniform float uTime;
-uniform vec3 iResolution;
-varying vec2 vUv;
-
-void main() {
-    // Normalizar las coordenadas UV
-    vec2 fragCoord = vUv * iResolution.xy;
-    vec2 uv = fragCoord/iResolution.xy;
-    
-    // Crear un color base para pruebas
-    vec3 color = vec3(uv.x, uv.y, abs(sin(uTime)));
-    
-    gl_FragColor = vec4(color, 1.0);
 }
